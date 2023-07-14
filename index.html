@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Script file</title>
+</head>
+
+<body>
+    <input type="text" name="" id="coin">
+    <button onclick="getdata(document.getElementById('coin').value)">click</button>
+
+    <script>
+
+        function getdata(params) {
+
+            var head = document.getElementsByTagName('head')[0];
+            var js = document.createElement("script");
+
+            js.type = "text/javascript";
+
+            if (params == 'bnb') {
+                js.src = "main.js";
+            }
+            else {
+                js.src = "sample.js";
+            }
+
+            head.appendChild(js);
+
+        }
+    </script>
+</body>
+
+</html>

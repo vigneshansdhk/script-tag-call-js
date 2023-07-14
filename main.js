@@ -1,0 +1,1 @@
+console.log("bnb script file");
